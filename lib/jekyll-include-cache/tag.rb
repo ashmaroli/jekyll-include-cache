@@ -13,10 +13,10 @@ module JekyllIncludeCache
       cached = JekyllIncludeCache.cache[key]
 
       if cached
-        Jekyll.logger.debug "Include cache hit:", path
+        # Jekyll.logger.debug "Include cache hit:", path
         cached
       else
-        Jekyll.logger.debug "Include cache miss:", path
+        # Jekyll.logger.debug "Include cache miss:", path
         JekyllIncludeCache.cache[key] = super
       end
     end
